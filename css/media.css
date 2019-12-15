@@ -1,97 +1,195 @@
 .head-nav [type="checkbox"],
 .head-nav label.toggleSubmenu {
-    display: none;
+  display: none;
 }
 
 .head-nav label.toggleMenu {
-    background: #FBD341;
-    display: none;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    color: #000000;
-    padding: 15px 25px;
-    border-radius: 10px;
-    cursor: pointer;
-    position: relative;
+  background: #fbd341;
+  display: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+  padding: 15px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
 }
 
 .head-nav label.toggleMenu .fas {
-    position: absolute;
-    top: 15px;
-    left: 80px;
-    font-size: 18px;
+  position: absolute;
+  top: 15px;
+  left: 80px;
+  font-size: 18px;
 }
 
 @media (max-width: 1200px) {
+  header .container,
+  .head-button > h2,
+  a {
+    margin-left: 1em;
+  }
 
-    header .container,
-    .head-button>h2,
-    a {
-        margin-left: 1em;
-    }
+  .header-top,
+  .head-nav-container {
+    margin-right: 2em;
+  }
 
-    .header-top,
-    .head-nav-container {
-        margin-right: 2em;
-    }
+  .flex-control-nav li {
+    margin: 0;
+  }
 
-    .flex-control-nav li {
-        margin: 0;
-    }
+  .client-content,
+  .client-title {
+    margin: 0 1em;
+  }
 
+  .client-text {
+    border: none;
+    padding-right: 0;
+    padding-left: 1em;
+  }
+
+  .client-dot {
+    display: none;
+  }
+
+  .container-footer {
+    padding: 3%;
+  }
 }
 
 @media (max-width: 1050px) {
-    h2 {
-        font-size: 25px;
-    }
+  h2 {
+    font-size: 25px;
+  }
 
+  .client-text {
+    line-height: 1.5;
+  }
 }
 
 @media (max-width: 950px) {
+  .head-nav-container {
+    display: block;
+    margin-left: 15%;
+  }
 
-    .head-nav-container {
-        display: block;
-        margin-left: 15%;
-    }
+  .head-nav ul {
+    display: none;
+  }
 
-    .head-nav ul {
-        display: none;
-    }
+  .head-nav label.toggleMenu {
+    display: block;
+  }
 
-    .head-nav label.toggleMenu {
-        display: block;
-    }
+  input.toggleMenu:checked ~ ul,
+  input.toggleSubmenu:checked ~ ul {
+    display: block;
+    position: relative;
+  }
 
-    input.toggleMenu:checked~ul,
-    input.toggleSubmenu:checked~ul {
-        display: block;
-        position: relative;
-    }
+  .head-nav label.toggleSubmenu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    display: block;
+  }
 
-    .head-nav label.toggleSubmenu {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        cursor: pointer;
-        display: block;
-    }
+  .head-nav label.toggleSubmenu .fa::before {
+    content: "\f0d7";
+    color: red;
+  }
 
-    .head-nav label.toggleSubmenu .fa::before {
-        content: "\f0d7";
-        color: red;
-    }
+  .head-nav label.toggleSubmenu .fa {
+    position: absolute;
+    top: 15px;
+    right: 30px;
+  }
 
-    .head-nav label.toggleSubmenu .fa {
-        position: absolute;
-        top: 15px;
-        right: 30px;
-    }
+  .head-nav label.toggleSubmenu:checked ~ label.toggleSubmenu .fa::before {
+    content: "\f0d8";
+  }
 
-    .head-nav label.toggleSubmenu:checked ~ label.toggleSubmenu .fa::before {
-        content: "\f0d8";
-    }
+  .head-nav-container {
+    margin-top: 0;
+  }
+
+  .header-address-phone {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .address {
+    margin-right: 0;
+  }
+
+  .client-text {
+    line-height: 1.5;
+  }
+
+  .container-footer {
+    display: grid;
+    grid-template-areas:
+      "logo nav1"
+      "nav2 address";
+    /* grid-template-rows: 1fr 1fr; */
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4vw;
+    justify-items: center;
+  }
+}
+
+@media (max-width: 850px) {
+  .client-title {
+    padding-top: 2%;
+    padding-bottom: 2%;
+  }
+
+  .client-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .client-text {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 650px) {
+  .container-footer {
+    grid-template-areas:
+      "logo logo"
+      "nav1 nav2"
+      "address address";
+      grid-template-rows: 1fr 25% 25%;
+  }
+
+  h5 {
+      margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 500px) {
+  .client-pic {
+    width: 290px;
+    height: 199px;
+  }
+}
+
+@media (max-width: 450px) {
+  .header-top {
+    flex-direction: column;
+  }
+
+  .client-title {
+    margin-right: 0;
+    /* font-size: 20px; */
+  }
 }

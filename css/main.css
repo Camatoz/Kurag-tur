@@ -334,7 +334,7 @@ sup {
 
 .client-title {
   padding-top: 4.5%;
-  margin-bottom: 6%;
+  padding-bottom: 6%;
 }
 
 h4 {
@@ -440,10 +440,6 @@ footer {
   background: #22334d;
 }
 
-.footer-logotype {
-  padding-bottom: 30px;
-}
-
 .fot-logo {
   display: block;
   background: url(../img/footer-logo.png) no-repeat center / contain;
@@ -453,11 +449,8 @@ footer {
   margin-bottom: 20px;
 }
 
-.fot-logo2 {
-  display: block;
-  background: url(../img/fut-logo.png) no-repeat center / contain;
-  width: 87px;
-  height: 17px;
+.fa-arrow-alt-circle-up {
+  font-size: 24px;
   margin-left: 5px;
 }
 
@@ -475,7 +468,9 @@ footer {
 .fot-logotype {
   color: #ffffff;
   display: flex;
+  align-items: center;
   margin-top: 20px;
+  cursor: pointer;
 }
 
 h5 {
@@ -485,10 +480,11 @@ h5 {
 }
 
 .container-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding-top: 3%;
+  display: grid;
+    grid-template-areas:
+      "logo nav1 nav2 address";
+    grid-gap: 4vw;
+  padding: 3% 0;
 }
 
 .footer-nav,
@@ -552,6 +548,24 @@ h5 {
   margin-right: 13%;
 }
 
+#footer-logo {
+  grid-area: logo;
+}
+
+#footer-nav1 {
+  grid-area: nav1;
+}
+
+#footer-nav2 {
+  grid-area: nav2;
+}
+
+#footer-foot {
+  grid-area: address;
+}
+
+
+/* Slider */
 .flexslider {
   border: 0;
   overflow: hidden;

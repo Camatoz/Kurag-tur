@@ -21,3 +21,9 @@ $(window).resize(function() {
   sliderContentPosition();
 });
 
+window.onload = function() {
+  // Прокрутка
+  document.getElementById("top").onclick = function() {
+    window.scrollTo(0, 0);
+  };
+};
