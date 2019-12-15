@@ -40,6 +40,7 @@ header .container {
 
 header {
   position: relative;
+  z-index: 100;
 }
 
 /* Header Logo */
@@ -122,14 +123,14 @@ header {
   margin-top: -30px;
 }
 
-.head-nav>ul {
+.head-nav > ul {
   display: flex;
   justify-content: flex-end;
   background: #fbd341;
   border-radius: 10px;
 }
 
-.head-nav>ul>li>a {
+.head-nav > ul > li > a {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
   font-weight: bold;
@@ -139,7 +140,7 @@ header {
   padding: 15px 25px;
 }
 
-.head-nav>ul>li>a>img {
+.head-nav > ul > li > a > img {
   margin-left: 5px;
 }
 
@@ -147,18 +148,35 @@ header {
   opacity: 0;
 }
 
+.head-nav-item:hover .nav-arrow2 {
+  transform: rotate(180deg);
+}
+
+.nav-arrow2 {
+  transition: all 0.2s;
+}
+
+.head-nav-sandwich {
+  position: absolute;
+  top: 3.4em;
+  right: 1.3em;
+  font-size: 25px;
+  color: #fbd43f;
+  display: none;
+}
+
 /* SUB MENU */
-.head-nav li ul {
+.head-nav-sub {
   position: absolute;
   background: rgba(42, 148, 219, 0.5);
   display: none;
 }
 
-.head-nav li:hover>ul {
+.head-nav li:hover .head-nav-sub {
   display: block;
 }
 
-.head-nav li>ul li a {
+.head-nav-sub li a {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   display: block;
@@ -213,7 +231,7 @@ h2 {
   margin-bottom: 5%;
 }
 
-.hot-tours-title>a {
+.hot-tours-title > a {
   color: #000000;
   font-size: 20px;
   font-weight: bold;
@@ -297,7 +315,7 @@ sup {
   bottom: 10px;
   right: 10px;
   display: block;
-  background: #FBD43F url(../img/slider-round-arrow.png) no-repeat center;
+  background: #fbd43f url(../img/slider-round-arrow.png) no-repeat center;
   border-radius: 50%;
   width: 37px;
   height: 37px;
@@ -472,9 +490,8 @@ h5 {
 
 .container-footer {
   display: grid;
-    grid-template-areas:
-      "logo nav1 nav2 address";
-    grid-gap: 4vw;
+  grid-template-areas: "logo nav1 nav2 address";
+  grid-gap: 4vw;
   padding: 3% 0;
 }
 
@@ -535,7 +552,7 @@ h5 {
   display: flex;
 }
 
-.fotter-icons>a {
+.fotter-icons > a {
   margin-right: 13%;
 }
 
@@ -554,7 +571,6 @@ h5 {
 #footer-foot {
   grid-area: address;
 }
-
 
 /* Slider */
 .flexslider {
