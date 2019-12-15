@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
     <link rel="stylesheet" href="flexslider/flexslider.css" />
+    <link rel="stylesheet" href="font-awesome/css/all.min.css" type="text/css">
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/media.css" />
     <title>КУРАЖ ТУР</title>
   </head>
 
@@ -76,15 +78,19 @@
 
         <div class="head-nav-container">
           <nav class="head-nav">
+            <input type="checkbox" name="toggle" id="menu" class="toggleMenu">
+            <label for="menu" class="toggleMenu"><i class="fas fa-bars"></i>Menu</label>
             <ul>
               <li><a href="#">Главная</a></li>
               <li>
+                <input type="checkbox" name="toggle" id="sub-m1" class="toggleSubmenu"> 
                 <a href="#"
                   >Туры<img
                     class="nav-arrow2"
                     src="img/head-arrow-down.png"
                     alt="arrow-down"
                 /></a>
+                <label for="sub-m1" class="toggleSubmenu"><i class="fa"></i></label>
                 <ul>
                   <li><a href="#">Горящие туры</a></li>
                   <li><a href="#">Поиск тура</a></li>
