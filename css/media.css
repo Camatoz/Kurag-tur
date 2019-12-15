@@ -139,11 +139,22 @@
     grid-template-areas:
       "logo nav1"
       "nav2 address";
-    /* grid-template-rows: 1fr 1fr; */
     grid-template-columns: 1fr 1fr;
     grid-gap: 4vw;
     justify-items: center;
   }
+
+  .form-position {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .form-container {
+      padding: 1em;
+      height: 15em;
+  }
+
 }
 
 @media (max-width: 850px) {
@@ -190,6 +201,17 @@
 
   .client-title {
     margin-right: 0;
-    /* font-size: 20px; */
+  }
+
+  .form-title-color {
+      font-size: 20px;
+  }
+
+  .fot-logo-text p>br {
+      display: none;
+  }
+
+  h4 {
+      margin-left: 0;
   }
 }
