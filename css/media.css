@@ -57,6 +57,9 @@
   .container-footer {
     padding: 3%;
   }
+  .form-title-color {
+    margin-left: 0.5em;
+  }
 }
 
 @media (max-width: 1050px) {
@@ -189,7 +192,7 @@
 
 @media (max-width: 500px) {
   .client-pic {
-    width: 290px;
+    max-width: 290px;
     height: 199px;
   }
 }
@@ -204,7 +207,7 @@
   }
 
   .form-title-color {
-      font-size: 20px;
+      font-size: 19px;
   }
 
   .fot-logo-text p>br {
