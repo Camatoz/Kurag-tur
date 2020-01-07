@@ -242,15 +242,17 @@ h3:hover {
   color: #fbd43f;
 }
 
-.hot-tour-slider {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+.hot-tours {
+  margin: 0 30px;
+}
+
+.pop-tour-slider {
+  display: none;
 }
 
 .tour-slider-choiсe {
   position: relative;
-  width: 30%;
+  width: 100%;
   height: auto;
   background: #f8f7f7;
   border-radius: 10px;
